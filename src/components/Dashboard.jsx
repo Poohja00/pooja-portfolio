@@ -47,24 +47,18 @@ function RoleColumn({ title, accent, count, recent, more, loading }) {
         <div className="py-10 text-center text-[0.9rem] text-ink-faint">Connecting to live data…</div>
       ) : (
         <div className="flex flex-col gap-2.5">
-          {recent.map((e, i) => {
-            const sub = e.loc; // designation + location only — pipeline status hidden
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.06 }}
-                className="flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3"
-              >
-                <span className="h-2 w-2 flex-none rounded-full" style={{ background: accent }} />
-                <div className="min-w-0 flex-1">
-                  <b className="block truncate text-[0.92rem] font-semibold">{e.role}</b>
-                  {sub && <span className="text-[11.5px] text-ink-faint">{sub}</span>}
-                </div>
-              </motion.div>
-            );
-          })}
+          {recent.map((e, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.06 }}
+              className="flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3"
+            >
+              <span className="h-2 w-2 flex-none rounded-full" style={{ background: accent }} />
+              <b className="min-w-0 flex-1 truncate text-[0.92rem] font-semibold">{e.role}</b>
+            </motion.div>
+          ))}
           {more > 0 && (
             <div className="pt-1 text-center text-[0.85rem] font-medium text-ink-faint">
               and {more.toLocaleString()} other profiles
