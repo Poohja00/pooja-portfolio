@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Button, Arrow } from "./common";
 import { Download } from "../lib/icons";
 
-// roles marquee (ported from the old single-file site) — rides on the green hills band
-const ROLES = ["SDET", "Engineering Manager", "Full-Stack", "Embedded / UAV", "AI Product Manager", "Unreal Developer", "Android", "Performance Marketing"];
+// generic role families I hire across (kept broad — not specific tracker titles) — rides on the green hills band
+const ROLES = ["Software Developers", "Testers", "Product Managers", "Designers", "Data & Analytics", "Marketing", "Sales", "Investor Relations", "Operations", "Interns"];
 
 export default function Hero() {
   return (
