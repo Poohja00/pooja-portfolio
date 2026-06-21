@@ -12,8 +12,14 @@ function Metric({ icon, value, suffix, label, chg, loading, breakdown }) {
       <div className="font-serif text-[2rem] font-medium leading-none">
         {loading ? "—" : typeof value === "number" ? <CountUp to={value} suffix={suffix || ""} /> : value}
       </div>
-      <div className="mt-2 text-[0.84rem] text-ink-soft">{label}</div>
-      {breakdown && <div className="mt-2.5">{breakdown}</div>}
+      {breakdown ? (
+        <div className="mt-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+          <span className="text-[0.84rem] text-ink-soft">{label}</span>
+          {breakdown}
+        </div>
+      ) : (
+        <div className="mt-2 text-[0.84rem] text-ink-soft">{label}</div>
+      )}
       {chg && <div className="absolute right-5 top-5 rounded-full bg-green-soft px-2.5 py-[3px] text-[11px] font-semibold text-green">{chg}</div>}
     </motion.div>
   );
