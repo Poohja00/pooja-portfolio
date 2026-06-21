@@ -35,7 +35,7 @@ export default function About() {
           ))}
         </motion.div>
 
-        <div className="flex flex-col gap-6 md:pt-4">
+        <div className="flex flex-col justify-center gap-6">
           <Reveal className="rounded-2xl border border-line bg-white p-8 shadow-soft">
             <p className="font-serif text-[1.35rem] leading-snug text-ink">
               A different lens on recruitment — <em className="italic text-green">equal parts technical, human, and data-driven.</em>
