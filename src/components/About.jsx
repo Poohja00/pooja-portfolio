@@ -10,12 +10,6 @@ const STORY = [
   "Today, I combine technical understanding, recruiting experience, and AI-powered workflows to help companies hire better and professionals find opportunities worth pursuing.",
 ];
 
-const STATS = [
-  { v: "3+", l: "years in tech" },
-  { v: "10+", l: "roles end to end" },
-  { v: "50K+", l: "post reach" },
-];
-
 export default function About() {
   return (
     <Section id="about">
@@ -46,14 +40,6 @@ export default function About() {
             <p className="font-serif text-[1.35rem] leading-snug text-ink">
               A different lens on recruitment — <em className="italic text-green">equal parts technical, human, and data-driven.</em>
             </p>
-          </Reveal>
-          <Reveal delay={0.1} className="grid grid-cols-3 gap-3">
-            {STATS.map((s) => (
-              <div key={s.l} className="rounded-2xl border border-line bg-white p-4 text-center">
-                <div className="font-serif text-[1.7rem] font-medium leading-none">{s.v}</div>
-                <div className="mt-2 text-[0.72rem] uppercase tracking-[0.04em] text-ink-faint">{s.l}</div>
-              </div>
-            ))}
           </Reveal>
         </div>
       </div>
