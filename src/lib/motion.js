@@ -13,5 +13,7 @@ export const stagger = (gap = 0.08) => ({
   show: { transition: { staggerChildren: gap } },
 });
 
-// Default viewport config: trigger once, a touch before fully in view.
-export const inView = { once: true, amount: 0.25, margin: "0px 0px -8% 0px" };
+// Default viewport config: trigger once, as soon as the element starts entering.
+// `amount: "some"` is height-independent — a percentage like 0.25 never fires on
+// tall stacked sections on mobile (25% of a very tall column can't fit on screen).
+export const inView = { once: true, amount: "some", margin: "0px 0px -10% 0px" };
