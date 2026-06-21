@@ -48,7 +48,7 @@ function RoleColumn({ title, accent, count, recent, more, loading }) {
       ) : (
         <div className="flex flex-col gap-2.5">
           {recent.map((e, i) => {
-            const sub = [e.status, e.loc].filter(Boolean).join(" · ");
+            const sub = e.loc; // designation + location only — pipeline status hidden
             return (
               <motion.div
                 key={i}
