@@ -43,7 +43,6 @@ export default function Dashboard() {
       <SectionHead
         eyebrow="Live dashboard"
         title={<>My sourcing pipeline, <em className="font-medium">at a glance.</em></>}
-        sub="Pulled live from my candidate trackers — only job titles and counts are ever read, server-side. Candidate names, contacts and client names never leave the spreadsheet."
       />
       <motion.div
         ref={ref}
